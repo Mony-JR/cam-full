@@ -1,6 +1,8 @@
 import React from 'react';
 
-const Position = () => {
+
+
+const Position:React.FC = () => {
   return (
     <div className='flex justify-start items-end w-full overflow-hidden'>
       <div className='w-full justify-start items-center flex mt-5 gap-5 pr-7 pl-7 h-[70px] flex-row overflow-x-auto whitespace-nowrap'>
