@@ -1,0 +1,34 @@
+.menu{
+    box-shadow: 0 0 20px rgb(9, 9, 9);
+    background-color: rgb(42, 42, 42);
+}
+
+
+.input{
+    position: relative;
+}
+.btn-se{
+    position: absolute;
+
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.jj{
+    transition: all .3s ease-in-out;
+}
+.box-box{
+    width: 400px;
+}
+.h{
+    height: 0;
+}
+.h1{
+    height: 100%;
+    background-color: #FF5858;
+}
+
+*{
+    transition: all .3s ease-in-out;
+}

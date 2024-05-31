@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.swiper-pagination-bullet-active {
+    background-color: orange !important; /* Color for the active bullet */
+    opacity: 1; /* Ensure the active bullet is fully opaque */
+  }
+
+  .Cato{
+    background-image: linear-gradient(to right, #FF5858, #F09819);
+}

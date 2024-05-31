@@ -1,0 +1,17 @@
+{
+  "name": "full_pro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private":true,
+  "license": "MIT",
+  "workspaces":[
+    "apps/*",
+    "package_/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"yarn workspace client_front-end run dev\" \"yarn workspace back-end run dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
+}
