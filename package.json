@@ -8,7 +8,7 @@
     "concurrently": "^8.2.2"
   },
   "scripts": {
-    "dev":"concurrently \"yarn workspace client_front-end run dev \" \"yarn workspace back-end run dev\"",
+    "dev":"concurrently \"yarn workspace client_front-end run dev \" \"yarn workspace dashboard_react run dev\" \"yarn workspace back-end run dev\"",
     "build":"concurrently \"yarn workspace client_front-end run build \" \"yarn workspace back-end run build\""
   },
   "workspaces":[
