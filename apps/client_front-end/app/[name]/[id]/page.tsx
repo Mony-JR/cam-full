@@ -3,6 +3,7 @@ import Data2 from '@/TypeofData/TypeofData';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import Button from "ui-components098/Button"
+import MyButton from "mini-ui-mony/Button/MyButton"
 
 interface PageProps {
     params: {
@@ -94,6 +95,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
             ))}
             <Link href={"../home"}>Back</Link> 
             <Button/>
+            <MyButton/>
         </div>
     );
 }
