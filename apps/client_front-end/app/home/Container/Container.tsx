@@ -9,7 +9,7 @@ const Cato: React.FC = () => {
     <div className='flex flex-col 
     items-center justify-start 
     gap-10 mt-2'>
-      <div className='Cato w-11/12 h-40
+      <div className=' bg-mybg-linear w-11/12 h-40
        rounded-2xl flex-col justify-between
         flex items-center'>
         <HeaderJob />

@@ -18,7 +18,9 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+          'mybg-linear': 'linear-gradient(to right, #FF5858, #F09819)',
       },
+      
     },
   },
   plugins: [],

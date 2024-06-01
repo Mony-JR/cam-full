@@ -13,7 +13,7 @@ const HeaderJob:React.FC = () => {
 
 
     return (
-        <div className='Cato w-11/12 h-40
+        <div className='w-11/12 h-40
         rounded-2xl flex-col justify-between
          flex items-center'>
 
@@ -39,7 +39,7 @@ const HeaderJob:React.FC = () => {
 
         <Link className=' w-full flex flex-col items-center justify-center relative' href={"/Search"}> 
          <button  className='text-xl absolute left-5 desktop:left-10 z-10
-          flex items-center justify-center p-4 Cato 
+          flex items-center justify-center p-4 bg-mybg-linear
            rounded-full text-white pointer-events-none '><IoSearch /></button>
         <input placeholder='hello' type='text' className='p-4
            placeholder:text-gray-400
