@@ -15,7 +15,6 @@ const Position: React.FC = () => {
 
   function handleClickGetIndex(index:number){
     setIndexofClick(index)
-    alert(index)
   }
 
   return (
