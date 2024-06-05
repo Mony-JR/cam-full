@@ -1,12 +1,12 @@
 import React, { ReactNode } from 'react'
 
 interface TypeNode{
-    children:ReactNode
+    children?:ReactNode
 }
 const Background:React.FC<TypeNode> = ({children}) => {
   return (
-    <div className='flex h-screen justify-center items-center  '>
-    <div className='h-screen w-full flex flex-col justify-start items-center '>
+
+    <div className=' h-screen w-full flex flex-col justify-start items-center '>
       <div className='w-full h-[20%] bg-mybg-linear '>
 
       </div>
@@ -14,8 +14,8 @@ const Background:React.FC<TypeNode> = ({children}) => {
       rounded-3xl justify-center items-center '>
         {children}
       </div>
+      
     </div>
-  </div>
   )
 }
 
