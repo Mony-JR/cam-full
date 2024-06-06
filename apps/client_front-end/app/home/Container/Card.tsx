@@ -45,7 +45,7 @@ const Card: React.FC<Data2> = ({ id, txt, logo, location, like, time, position, 
                             <span className='text-slate-400'>Position {position}</span>
                             <h1 className='text-orange-500'>{salary.min}$ - {salary.max}$</h1>
                         </div>
-                        <div className='flex justify-between w-10/12 mb-4'>
+                        <div className='flex justify-between w-full mb-4'>
                             <label className='flex items-center gap-3'>
                                 <FaBusinessTime />
                                 <span>{date}</span>
