@@ -1,14 +1,15 @@
 interface Data2 {
-    id: number
-    txt: string
-    logo: string
-    position: number
-    time: JobTime
-    salary: Salary
-    date: string
-    location: string
-    like: boolean
+    id?: number
+    txt?: string
+    logo?: string
+    position?: number
+    time?: JobTime
+    salary?: Salary
+    date?: string
+    location?: string
+    like?: boolean
     handleHeartClick?:(id:number)=>void
+    styles?:string
 }
 
 interface JobTime {

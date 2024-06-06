@@ -38,7 +38,7 @@ const Page: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className='w-full h-screen '>
       <Background>
         <div className='w-full mt-[-70px]  pl-5 pr-5 justify-center items-center flex flex-col gap-5 '>
           <div className=' relative'>

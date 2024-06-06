@@ -19,6 +19,7 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
           'mybg-linear': 'linear-gradient(to right, #FF5858, #F09819)',
+          'mybg-image': "url('../public/Skyscrapers5.jpeg')",
       },
       
     },

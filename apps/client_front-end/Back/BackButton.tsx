@@ -12,9 +12,12 @@ const BackButton = () => {
 
 export default BackButton
 
-export const BackButton_md = () => {
+type propsClass={
+  styles?:string
+}
+export const BackButton_md:React.FC<propsClass> = ({styles}) => {
   return (
-    <div className='w-full h-10 '>
+    <div className={` ${styles}` }>
       <span className='text-2xl '><IoArrowBack /></span>
     </div>
   )
