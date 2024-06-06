@@ -32,17 +32,13 @@ const Page: React.FC = () => {
     setPic(null);
     if(RefFile.current){
       RefFile.current.value=""
+
     }
     
   }
 
-  //'https://i.pinimg.com/736x/63/a5/e8/63a5e8ee8cdcfab2f952bcd46a73e5c4.jpg'
   return (
     <div>
-
-      {/* <div className='w-full h-screen '>
-      <div className='w-full h-[40%] bg-red-500 '></div>
-    </div> */}
       <Background>
         <div className='w-full mt-[-70px]  pl-5 pr-5 justify-center items-center flex flex-col gap-5 '>
           <div className=' relative'>
