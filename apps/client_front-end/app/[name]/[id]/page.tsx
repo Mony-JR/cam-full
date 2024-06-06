@@ -93,7 +93,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
     return (
         <div className='w-full h-full flex flex-col pb-20 '>
             <Link href={"../"}> <BackButton_md styles='absolute bg-white p-3 px-4 rounded-xl top-5 left-3 ' /></Link>
-            <Background  bgImage='bg-mybg-image h-[250px]  '>
+            <Background  style='bg-mybg-image h-[250px] '>
                 <div className=' h-60 w-full pl-4 pr-4 mt-[-100px] z-10 '>
                     {getData.map((p) => (
                         <CardApply key={p.id} id={p.id} txt={p.txt}
