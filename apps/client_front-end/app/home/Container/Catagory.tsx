@@ -1,20 +1,21 @@
+import { WorkStatus } from "./Popup";
 
 
 interface propData {
   reset: number
   setReset: (value: number) => void
-  timework: string;
-  setTimework: (value: string) => void;
+  timework: WorkStatus
+  setTimework: (value: WorkStatus) => void;
 }
 const Catagory: React.FC<propData> = ({ reset, setReset, timework, setTimework }) => {
 
 
   const onChangeSalary = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setReset(Number(e.target.value))
+    setReset(Number(e.target.value as WorkStatus ))
 
   }
   const onChangeTimework = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setTimework(e.target.value);
+    setTimework(e.target.value as WorkStatus);
   };
   return (
     <div className=' flex flex-col gap-5 h-[150%] w-full '>

@@ -6,7 +6,7 @@ interface PopupProps {
   up: boolean;
 }
 
-type WorkStatus = "Default" | "PartTime" | "FullTime";
+export type WorkStatus = "Default" | "PartTime" | "FullTime";
 const Popup: React.FC<PopupProps> = ({ setUp, up }) => {
 
   const [reset,setReset]=useState<number>(0)
