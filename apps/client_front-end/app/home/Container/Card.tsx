@@ -14,11 +14,11 @@ const Card: React.FC<Data2> = ({ id, txt, logo, location, like, time, position, 
     };
 
     return (
-        <section key={id} className='w-[400px] flex justify-between flex-col pl-5 items-center ipse:pl-3 ip14:pl-0 '>
+        <section key={id} className='w-[400px] flex justify-between flex-col pl-5 items-center pr-5 '>
 
-            <div className='ipse:w-[350px] ip14:w-[400px] h-[260px] w-[350px] flex justify-between flex-col items-center bg-white drop-shadow-lg rounded-2xl pt-3'>
+            <div className='ipse:w-[350px] ip14:w-[400px] py-3 w-[350px] flex justify-between flex-col items-center bg-white drop-shadow-lg rounded-2xl pt-3'>
 
-                <div className='flex justify-between w-11/12 items-center'>
+                <div className='flex h-[30px] pl-5 pr-5 justify-between w-full items-center'>
                     <div className='flex gap-5 items-center'>
                         <Image src={logo} width={50} height={50} alt='logo' />
                         <h1>{txt}</h1>
@@ -26,9 +26,9 @@ const Card: React.FC<Data2> = ({ id, txt, logo, location, like, time, position, 
 
                     <span onClick={onHeartClick} className='text-2xl z'>{like ? <IoMdHeart /> : <CiHeart />}</span>
                 </div>
-                <Link className='ipse:w-[350px] ip14:w-[400px] h-[250px] w-[100%] flex justify-between flex-col items-center pt-3' href={`${date}/${id}`}>
-                    <div className='flex justify-between w-11/12 items-center'>
-                        <div className='flex flex-col gap-7 w-full justify-between'>
+                <Link className=' h-[250px] w-[100%] flex justify-evenly flex-col pl-5 pr-5 items-center pt-3' href={`${date}/${id}`}>
+                    <div className='flex justify-between w-full items-center'>
+                        <div className='flex flex-col gap-5 w-full justify-between'>
                             <div className='flex gap-8 w-full justify-start'>
                                 <span className='text-orange-500'>Remote</span>
                                 <span className='text-orange-500'>{time.full}</span>
@@ -40,7 +40,7 @@ const Card: React.FC<Data2> = ({ id, txt, logo, location, like, time, position, 
                             </div>
                         </div>
                     </div>
-                    <div className='flex w-full flex-col ip14:mb-5 ipse:mb-10 justify-between gap-5 items-center'>
+                    <div className='flex w-full flex-col justify-between gap-5 items-center'>
                         <div className='flex justify-between w-10/12'>
                             <span className='text-slate-400'>Position {position}</span>
                             <h1 className='text-orange-500'>{salary.min}$ - {salary.max}$</h1>

@@ -63,7 +63,7 @@ const JobMain: React.FC = () => {
                 <h3>Recommend</h3>
                 <Link href="/Search"><span className='text-orange-400'>Searching more</span></Link>
             </div>
-            <main className='w-full h-[300px]'>
+            <main className='w-full'>
         <Swiper
           slidesPerView={1}
           spaceBetween={10}
