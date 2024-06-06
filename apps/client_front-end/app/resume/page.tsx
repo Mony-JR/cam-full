@@ -11,13 +11,13 @@ const page = () => {
 
         <div className='w-full flex gap-4 flex-col '>
 
-          <div className=' h-28 mt-[-10%] w-full shadow-2xl rounded-3xl flex justify-start pl-5 items-center bg-white '>
+          <div className=' h-28 mt-[-10%] w-full shadow-xl rounded-3xl flex justify-start pl-10 items-center bg-white '>
             <h1>Create & Generate CV Online</h1>
           </div>
-          <div className=' h-28 w-full shadow-2xl rounded-3xl flex justify-start pl-5 items-center bg-white '>
-            <h1>Create & Generate CV Online</h1>
+          <div className=' h-28 w-full shadow-xl rounded-3xl flex justify-start pl-10 items-center bg-white '>
+            <h1>Attached CV </h1>
           </div>
-          <div className='flex flex-col justify-center items-center '>
+          <div className='flex flex-col justify-center pt-5 items-center '>
             <h1 className='w-full pl-3 text-2xl'>My Resume</h1>
             <Image src={Mypic} alt={''} width={300} height={400}/>
             <div className='flex  flex-col justify-center items-center'>
