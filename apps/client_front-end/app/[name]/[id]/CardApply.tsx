@@ -11,7 +11,7 @@ const CardApply: React.FC<Data2> = ({ txt, logo, location, position, date ,style
          justify-between items-center `}>
             <div className='w-full flex justify-start items-center '>
                 <div className=' w-[130px] h-[130px] flex justify-center items-center bg-white rounded-full shadow-2xl '>
-                    <Image src={logo} width={80} height={80} alt='logo' />
+                    <Image src={logo||""} width={80} height={80} alt='logo' />
                 </div>
                 <div className='flex flex-col justify-between h-full'>
                     <div className='w-full h-24 '>
