@@ -10,7 +10,7 @@ const Background:React.FC<TypeNode> = ({children,style,bgImage}) => {
   return (
 
     <div className={`  h-full w-full flex flex-col justify-start items-center ` }>
-      <div className={` ${bgImage} ${style ? style:" bg-mybg-linear "} w-full h-[20%]   `}>
+      <div className={` ${bgImage} ${style ? style:" bg-mybg-linear "} w-full h-[20%]  `}>
 
       </div>
       <div className='flex w-full flex-col bg-white mt-[-50px]

@@ -6,7 +6,7 @@ import Mypic from "@/public/Croods User Interface.png"
 
 const page = () => {
   return (
-    <div className='w-full h-screen pl-3 pr-3 pt-5 pb-20 flex justify-center items-center'>
+    <div className='w-full h-screen ipse:h-[110vh] pl-3 pr-3 pt-5 pb-20 flex justify-center items-center'>
       <Background style="rounded-3xl bg-mybg-linear" >
 
         <div className='w-full flex gap-4 flex-col '>
