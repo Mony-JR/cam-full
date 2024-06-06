@@ -48,10 +48,12 @@ const Menu: React.FC = () => {
           </span>
         </Link>
 
-        <span className='text-black flex justify-center flex-col items-center'>
+        <Link href={'/resume'}>
+        <span className={`text-black flex justify-center flex-col items-center ${(pathname === '/resume' || pathname === '/Search') ? 'text-orange-500' : ''}`}>
           <FaFile />
           <label className='text-xl'>Resume</label>
         </span>
+        </Link>
         <span className='text-black flex justify-center flex-col items-center'>
           <FaClipboardCheck />
           <label className='text-xl'>Apply</label>
