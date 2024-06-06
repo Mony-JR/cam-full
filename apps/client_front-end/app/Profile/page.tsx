@@ -7,12 +7,14 @@ import { FaRegHeart } from "react-icons/fa";
 import { MdCircleNotifications } from "react-icons/md";
 import { FaCircleUser } from "react-icons/fa6";
 import { IoCameraSharp } from "react-icons/io5";
+import { useRouter } from 'next/navigation'
 
 
 const Page: React.FC = () => {
   const RefFile = useRef<HTMLInputElement | null>(null)
   const [pic, setPic] = useState<string | null>('')
   console.log(pic);
+  const router = useRouter()
 
 
   function handleImage() {
@@ -21,6 +23,17 @@ const Page: React.FC = () => {
   }
   function handleSelectImage(event: any) {
     setPic(URL.createObjectURL(event.target.files[0]))
+  }
+
+  function handleLogut(){
+    if(!pic){
+      router.push('/login')
+    }
+    setPic(null);
+    if(RefFile.current){
+      RefFile.current.value=""
+    }
+    
   }
 
   //'https://i.pinimg.com/736x/63/a5/e8/63a5e8ee8cdcfab2f952bcd46a73e5c4.jpg'
@@ -55,7 +68,7 @@ const Page: React.FC = () => {
             <span className='flex w-full text-xl gap-5 items-center'><FaRegHeart /> Favorith</span>
             <span className='flex w-full text-xl gap-5 items-center'> <MdCircleNotifications /> Notification</span>
           </div>
-          <ButtonSigOut />
+          <ButtonSigOut Logout={handleLogut} logout={pic} />
         </div>
       </Background>
     </div>
