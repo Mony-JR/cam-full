@@ -13,7 +13,7 @@ const HeaderJob:React.FC = () => {
 
 
     return (
-        <div className='w-11/12 h-40
+        <div className=' w-full h-40
         rounded-2xl flex-col justify-between
          flex items-center'>
 

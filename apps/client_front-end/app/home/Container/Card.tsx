@@ -14,9 +14,9 @@ const Card: React.FC<Data2> = ({ id, txt, logo, location, like, time, position, 
     };
 
     return (
-        <section key={id} className='w-[400px] flex justify-between flex-col pl-5 items-center pr-5 '>
+        <section key={id} className='w-full flex justify-between flex-col pl-5 items-center pr-5 '>
 
-            <div className='ipse:w-[350px] ip14:w-[400px] py-3 w-[350px] flex justify-between flex-col items-center bg-white drop-shadow-lg rounded-2xl pt-3'>
+            <div className=' w-full flex justify-between flex-col items-center bg-white drop-shadow-lg rounded-2xl pt-3'>
 
                 <div className='flex h-[30px] pl-5 pr-5 justify-between w-full items-center'>
                     <div className='flex gap-5 items-center'>

@@ -1,6 +1,5 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import "../Menu.css";
 import { FaFile } from "react-icons/fa";
 import { FaCircleUser } from "react-icons/fa6";
 import { FaClipboardCheck } from "react-icons/fa";
@@ -39,7 +38,7 @@ const Menu: React.FC = () => {
         className={`flex sm:flex-col justify-between items-center text-3xl 
         fixed h-20 w-full  
         bottom-0 pl-5 pr-5  
-        pt-2 pb-2 menu z-10 bg-white bg-white  ${show ? 'hidden' : 'flex'} `}
+        pt-2 pb-2 menu z-10 bg-white  ${show ? 'hidden' : 'flex'} `}
       >
         <Link href={'/home'}>
           <span className={`text-black flex justify-center flex-col items-center ${(pathname === '/home' || pathname === '/Search') ? 'text-orange-500' : ''}`}>
