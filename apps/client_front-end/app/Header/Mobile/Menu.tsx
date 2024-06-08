@@ -36,31 +36,31 @@ const Menu: React.FC = () => {
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
         className={`flex sm:flex-col justify-between items-center text-3xl 
-        fixed h-20 w-full  
+        fixed h-20 w-full shadow-[0_35px_84px_15px_rgba(0,0,0,0.2)]
         bottom-0 pl-5 pr-5  
         pt-2 pb-2 menu z-10 bg-white  ${show ? 'hidden' : 'flex'} `}
       >
         <Link href={'/home'}>
-          <span className={`text-black flex justify-center flex-col items-center ${(pathname === '/home' || pathname === '/Search') ? 'text-orange-500' : ''}`}>
+          <span className={`text-black text-xl flex justify-center flex-col items-center ${(pathname === '/home' || pathname === '/Search') ? 'text-orange-500' : ''}`}>
             <GoHomeFill />
-            <label className='text-xl'>Home</label>
+            <label className='text-sm'>Home</label>
           </span>
         </Link>
 
         <Link href={'/resume'}>
-        <span className={`text-black flex justify-center flex-col items-center ${(pathname === '/resume' || pathname === '/Search') ? 'text-orange-500' : ''}`}>
+        <span className={`text-black text-xl flex justify-center flex-col items-center ${(pathname === '/resume' || pathname === '/Search') ? 'text-orange-500' : ''}`}>
           <FaFile />
-          <label className='text-xl'>Resume</label>
+          <label className=' text-sm'>Resume</label>
         </span>
         </Link>
-        <span className='text-black flex justify-center flex-col items-center'>
+        <span className='text-black text-xl flex justify-center flex-col items-center'>
           <FaClipboardCheck />
-          <label className='text-xl'>Apply</label>
+          <label className=' text-sm'>Apply</label>
         </span>
         <Link href={'/myprofile'}>
-          <span className={`text-black flex justify-center flex-col items-center ${pathname === '/myprofile' ? 'text-orange-500' : ''}`}>
+          <span className={`text-black text-xl flex justify-center flex-col items-center ${pathname === '/myprofile' ? 'text-orange-500' : ''}`}>
             <FaCircleUser />
-            <label className='text-xl'>Profile</label>
+            <label className=' text-sm'>Profile</label>
           </span>
         </Link>
       </div>
