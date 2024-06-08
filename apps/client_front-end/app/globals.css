@@ -11,3 +11,7 @@
   .Cato{
     background-image: linear-gradient(to right, #FF5858, #F09819);
 }
+
+body,html{
+  touch-action: pan-x pan-y;
+}

@@ -13,7 +13,6 @@ import { useRouter } from 'next/navigation'
 const Page: React.FC = () => {
   const RefFile = useRef<HTMLInputElement | null>(null)
   const [pic, setPic] = useState<string | null>('')
-  console.log(pic);
   const router = useRouter()
 
 
