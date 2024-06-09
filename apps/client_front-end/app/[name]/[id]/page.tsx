@@ -9,6 +9,10 @@ import { BackButton_md } from '@/Back/BackButton';
 import Image from 'next/image';
 import CardApply from './CardApply';
 import CardDescription from './CardDescription';
+import ButtonApply from './ButtonApply';
+import { Sheet } from 'react-modal-sheet';
+import { GrFormNextLink } from "react-icons/gr";
+
 
 interface PageProps {
     params: {
@@ -85,15 +89,17 @@ const Page: React.FC<PageProps> = ({ params }) => {
         const Fil_data = data.filter((p: Data2) => p.id === id)
         setGetData(Fil_data)
     }, [])
+    const [apply, setapply] = useState<boolean>(false)
+    const [select,setselect]=useState<boolean>(false)
 
-    console.log(getData);
-
-
+    function handleApply() {
+        setapply(!apply)
+    }
 
     return (
         <div className='w-full h-full flex flex-col pb-20 '>
             <Link href={"../"}> <BackButton_md styles='absolute bg-white p-3 px-4 rounded-xl top-5 left-3 ' /></Link>
-            <Background  style='bg-mybg-image h-[250px] '>
+            <Background style='bg-mybg-image h-[250px] '>
                 <div className=' h-60 w-full pl-4 pr-4 mt-[-100px] z-10 '>
                     {getData.map((p) => (
                         <CardApply key={p.id} id={p.id} txt={p.txt}
@@ -102,29 +108,57 @@ const Page: React.FC<PageProps> = ({ params }) => {
                             location={p.location} />
                     ))}
                 </div>
-                
+
             </Background>
             <div className='pl-5 pr-5 pt-4'>
-                {getData.map((p)=>(
+                {getData.map((p) => (
                     <CardDescription key={p.id} />
                 ))}
             </div>
             <div className='pl-5 pr-5 pt-4'>
-                {getData.map((p)=>(
+                {getData.map((p) => (
                     <CardDescription key={p.id} />
                 ))}
             </div>
             <div className='pl-5 pr-5 pt-4'>
                 <h1>Location</h1>
-                {getData.map((p)=>(
+                {getData.map((p) => (
                     <CardDescription key={p.id} />
                 ))}
             </div>
             <div className='pl-5 pr-5 pt-4'>
-                {getData.map((p)=>(
+                {getData.map((p) => (
                     <CardDescription key={p.id} />
                 ))}
             </div>
+            {getData.map((p) => (
+                <ButtonApply handleClick={handleApply} id={p.id} />
+            ))}
+            <Sheet isOpen={apply} onClose={() => setapply(false)} onCloseEnd={()=>setselect(false)} snapPoints={[450, 400, 0]}>
+                <Sheet.Container >
+                    <Sheet.Header />
+                    <Sheet.Content>
+                        <div className='flex flex-col gap-5 pl-5 pr-5 h-ful w-full justify-center items-center '>
+
+                            <p className='w-full pl-5 text-gray-400  '>Please select for apply </p>
+                            <div onClick={()=>setselect(!select)} className={`h-20 pl-5 w-full flex rounded-3xl
+                             items-center
+                               drop-shadow-xl ${select ? 'bg-orange-500':'bg-white'} `}>
+                                <h1>User Name </h1>
+                            </div>
+                            <div className='pl-5 h-20 w-full flex rounded-3xl items-center bg-white drop-shadow-xl '>
+                                <h1>Attached CV </h1>
+                            </div>
+                            <button className={`p-5 flex rounded-3xl text-white justify-center 
+                            gap-5 items-center ${select? 'bg-orange-500':'bg-orange-200'}  w-48`}>
+                                Confirm <span className='text-2xl'><GrFormNextLink /></span>  </button>
+
+                        </div>
+                    </Sheet.Content>
+                </Sheet.Container>
+                <Sheet.Backdrop />
+            </Sheet>
+
         </div>
     );
 }

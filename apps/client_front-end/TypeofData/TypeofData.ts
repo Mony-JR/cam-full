@@ -10,6 +10,7 @@ interface Data2 {
     like?: boolean
     handleHeartClick?:(id:number)=>void
     styles?:string
+    handleClick?:()=>void
 }
 
 interface JobTime {

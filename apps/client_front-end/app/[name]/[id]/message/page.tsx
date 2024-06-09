@@ -1,14 +1,14 @@
 'use client'
-import Data2 from '@/TypeofData/TypeofData';
+
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'next/navigation';
+import Data2 from '@/TypeofData/TypeofData';
+import Image from 'next/image';
+import CardMessage from './CardMessage';
 
-interface PageProps {
-    params: {
-        name: string;
-    };
-}
-
-const Page: React.FC<PageProps> = ({ params }) => {
+const page = () => {
+    const params = useParams();
+    const id = params?.id ? parseInt(params.id as string, 10) : null;
     const [data, setData] = useState<Data2[]>([
         {
             id: 1,
@@ -66,17 +66,25 @@ const Page: React.FC<PageProps> = ({ params }) => {
             like: false
         },
     ]);
-    const [data2, setGetData] = useState<Data2[]>([])
+
+    const [getData, setGetData] = useState<Data2[]>([])
+
     useEffect(() => {
-        let id: number = parseInt(params.name)
-        const Fil_data: Data2[] = data.filter((p: Data2) => p.id === id)
+        const Fil_data = data?.filter((p: Data2) => p.id === id)
         setGetData(Fil_data)
     }, [])
+
+    console.log(getData);
+
     return (
-        <div>
-            <h1>Hello {params.name}</h1>
+        <div className='flex w-full h-screen '>
+            <div className='w-full h-full ' >
+                {getData.map((p) => (
+                    <CardMessage key={p.id} logo={p.logo} txt={p.txt} location={p.location} />
+                ))}
+            </div>
         </div>
     );
 }
 
-export default Page;
+export default page;
