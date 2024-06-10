@@ -2,7 +2,7 @@
 import Data2 from '@/TypeofData/TypeofData'
 import React,{useState,useEffect} from 'react'
 
-const Otp:React.FC<Data2> = ({handleClick}) => {
+const Otp:React.FC = () => {
     const [count, setcount] = useState<number>(30)
     const [get, setget] = useState<number | string>("Get")
     const [work, setwork] = useState<boolean>(true)
@@ -15,18 +15,19 @@ const Otp:React.FC<Data2> = ({handleClick}) => {
           setcount(count - 1)
         }
       }, 1000)
-      if(count==0){
-        setTimeout(()=>{
-        setwork(true)
-        setcount(30)      
-        },1000)
-  
-      } 
+       if(count==0){
+      setTimeout(()=>{
+      setwork(true)
+      setcount(30)      
+      },1000)
+
+    } 
       
       
     }, [work,count])
     function getOTP() {
     setwork(false)
+   
 
     }
   
