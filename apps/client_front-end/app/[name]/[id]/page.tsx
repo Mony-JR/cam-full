@@ -12,7 +12,7 @@ import CardDescription from './CardDescription';
 import ButtonApply from './ButtonApply';
 import { Sheet } from 'react-modal-sheet';
 import { GrFormNextLink } from "react-icons/gr";
-
+import { useRouter } from 'next/navigation';
 
 interface PageProps {
     params: {
@@ -82,6 +82,8 @@ const Page: React.FC<PageProps> = ({ params }) => {
         },
     ]);
 
+    const [user,setuser]=useState<string>('')
+
     const [getData, setGetData] = useState<Data2[]>([])
 
     useEffect(() => {
@@ -91,9 +93,16 @@ const Page: React.FC<PageProps> = ({ params }) => {
     }, [])
     const [apply, setapply] = useState<boolean>(false)
     const [select,setselect]=useState<boolean>(false)
+    const router=useRouter();
 
     function handleApply() {
-        setapply(!apply)
+        if(user===""||null||undefined){
+            router.push("/login/register")
+        }
+        else{
+        setapply(!apply)            
+        }
+
     }
 
     return (

@@ -5,6 +5,9 @@ import { useParams } from 'next/navigation';
 import Data2 from '@/TypeofData/TypeofData';
 import Image from 'next/image';
 import CardMessage from './CardMessage';
+import { IoMdSend } from "react-icons/io";
+import pic from "@/public/Croods The Feedback.png"
+
 
 const page = () => {
     const params = useParams();
@@ -77,11 +80,18 @@ const page = () => {
     console.log(getData);
 
     return (
-        <div className='flex w-full h-screen '>
-            <div className='w-full h-full ' >
+        <div className='flex flex-col w-full h-screen justify-center '>
+            <div className='w-full' >
                 {getData.map((p) => (
                     <CardMessage key={p.id} logo={p.logo} txt={p.txt} location={p.location} />
                 ))}
+            </div>
+            <div className=' h-full w-full flex justify-center items-center '>
+                <Image src={pic} alt={"My Pic"} width={500} height={200}/>
+            </div>
+            <div className='p-5 w-full flex justify-center items-center relative bg-white z-30 '>
+                <input className='p-4 rounded-3xl drop-shadow-md w-full' type="text" placeholder='Text Message' />
+                <span className=' text-2xl absolute right-10 '><IoMdSend /></span>
             </div>
         </div>
     );
