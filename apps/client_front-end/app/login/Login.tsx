@@ -1,8 +1,11 @@
-import React from 'react'
+
 import Connect from './Connect'
 import Link from 'next/link'
+import Otp from './Otp'
 
-const Login = () => {
+const Login:React.FC = () => {
+ 
+
   return (
     <div className='flex flex-col justify-evenly h-screen '>
 
@@ -12,7 +15,7 @@ const Login = () => {
 
         <div className='flex justify-center relative w-full'>
           <input className='p-4 pl-6 outline-none shadow-lg w-10/12 rounded-xl ' type="text" placeholder='Verify Code' />
-          <button className='Cato p-5 w-[120px] absolute right-5 bottom-0 rounded-[20px] text-white  '>Get</button>
+          <Otp/>
         </div>
         <div className='flex gap-2 '>
           <h3>{`Don't have an account?`} </h3>
