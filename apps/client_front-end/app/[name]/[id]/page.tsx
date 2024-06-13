@@ -121,7 +121,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
             </Background>
             <div className='pl-5 pr-5 pt-4'>
                 {getData.map((p) => (
-                    <CardDescription key={p.id} />
+                    <CardDescription key={p.id} time={p.time} txt={p.txt} salary={p.salary}  />
                 ))}
             </div>
             <div className='pl-5 pr-5 pt-4'>
