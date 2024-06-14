@@ -7,13 +7,9 @@ const Cato: React.FC = () => {
 
   return (
     <div className='flex flex-col 
-    items-center justify-start 
+    items-center justify-start pt-5
     gap-10 mt-2'>
-      <div className=' bg-mybg-linear w-11/12 h-40
-       rounded-2xl flex-col justify-between
-        flex items-center'>
-        <HeaderJob />
-      </div>
+      <HeaderJob />
       <JobMain />
       <MoreCard />
 

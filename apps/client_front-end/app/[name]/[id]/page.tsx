@@ -1,18 +1,20 @@
 'use client'
+import { BackButton_md } from '@/Back/BackButton';
+import Background from '@/Background/Background';
 import Data2 from '@/TypeofData/TypeofData';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import Button from "ui-components098/Button"
-import MyButton from "mini-ui-mony/Button/MyButton"
-import Background from '@/Background/Background';
-import { BackButton_md } from '@/Back/BackButton';
-import Image from 'next/image';
 import CardApply from './CardApply';
 import CardDescription from './CardDescription';
-import ButtonApply from './ButtonApply';
+import CardReq from './CardReq';
+import CardCampany from './CardCompany';
+import CardLocation from './CardLocation';
 import { Sheet } from 'react-modal-sheet';
-import { GrFormNextLink } from "react-icons/gr";
+import ButtonApply from './ButtonApply';
 import { useRouter } from 'next/navigation';
+import { GrFormNextLink } from 'react-icons/gr';
+
+
 
 interface PageProps {
     params: {
@@ -82,13 +84,13 @@ const Page: React.FC<PageProps> = ({ params }) => {
         },
     ]);
 
-    const [user,setuser]=useState<string>('')
+    const [user,setuser]=useState<string>('Mony')
 
     const [getData, setGetData] = useState<Data2[]>([])
 
     useEffect(() => {
-        let id: number = parseInt(params.id)
-        const Fil_data = data.filter((p: Data2) => p.id === id)
+        let id: number = parseInt(params?.id)
+        const Fil_data = data.filter((p: Data2) => p.id ===id)
         setGetData(Fil_data)
     }, [])
     const [apply, setapply] = useState<boolean>(false)
@@ -106,10 +108,10 @@ const Page: React.FC<PageProps> = ({ params }) => {
     }
 
     return (
-        <div className='w-full h-full flex flex-col pb-20 '>
+        <div className='w-full h-full flex  flex-col pb-28 '>
             <Link href={"../"}> <BackButton_md styles='absolute bg-white p-3 px-4 rounded-xl top-5 left-3 ' /></Link>
             <Background style='bg-mybg-image h-[250px] '>
-                <div className=' h-60 w-full pl-4 pr-4 mt-[-100px] z-10 '>
+                <div className=' h-52 w-full pl-4 pr-4 mt-[-100px] z-10 '>
                     {getData.map((p) => (
                         <CardApply key={p.id} id={p.id} txt={p.txt}
                             logo={p.logo} position={p.position}
@@ -126,22 +128,23 @@ const Page: React.FC<PageProps> = ({ params }) => {
             </div>
             <div className='pl-5 pr-5 pt-4'>
                 {getData.map((p) => (
-                    <CardDescription key={p.id} />
+                    <CardReq key={p.id}/>
                 ))}
             </div>
             <div className='pl-5 pr-5 pt-4'>
                 <h1>Location</h1>
                 {getData.map((p) => (
-                    <CardDescription key={p.id} />
+                    <CardLocation key={p.id}/>
                 ))}
             </div>
             <div className='pl-5 pr-5 pt-4'>
                 {getData.map((p) => (
-                    <CardDescription key={p.id} />
+                    <CardCampany key={p.id} logo={p.logo} />
                 ))}
             </div>
+
             {getData.map((p) => (
-                <ButtonApply handleClick={handleApply} id={p.id} />
+                <ButtonApply key={p.id} handleClick={handleApply} id={p.id} />
             ))}
             <Sheet isOpen={apply} onClose={() => setapply(false)} onCloseEnd={()=>setselect(false)} snapPoints={[450, 400, 0]}>
                 <Sheet.Container >
