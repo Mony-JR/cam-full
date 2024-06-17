@@ -7,7 +7,7 @@ import { MdNotifications } from 'react-icons/md'
 import { TbMenuDeep } from 'react-icons/tb'
 import Popup from './Popup'
 import Image from 'next/image'
-import logoTeam from "@/public/logo.png"
+import logoTeam from "@/public/logo new.jpg"
 import ButtonLanguage from '@/ChangLanguage/ButtonLanguage'
 
 const HeaderJob: React.FC = () => {

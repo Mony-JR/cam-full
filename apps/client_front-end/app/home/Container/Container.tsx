@@ -2,6 +2,7 @@
 import JobMain from './JobMain';
 import HeaderJob from './HeaderJob';
 import MoreCard from './MoreCard';
+import Message from './Message';
 
 const Cato: React.FC = () => {
 
@@ -12,7 +13,7 @@ const Cato: React.FC = () => {
       <HeaderJob />
       <JobMain />
       <MoreCard />
-
+      <Message/>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import Background from '@/Background/Background'
 import React from 'react'
 import Image from 'next/image'
 import Mypic from "@/public/Croods User Interface.png"
+import Message from '../home/Container/Message'
 
 
 const page = () => {
@@ -29,6 +30,7 @@ const page = () => {
         </div>
 
       </Background>
+      <Message/>
     </div>
   )
 }
